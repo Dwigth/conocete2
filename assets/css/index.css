@@ -1,0 +1,7 @@
+.panel .span-1-75 {
+    width: 25rem !important;
+}
+.panel > * {
+    position: relative;
+    min-width: 25rem !important;
+}
