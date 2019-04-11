@@ -5,3 +5,15 @@
     position: relative;
     min-width: 25rem !important;
 }
+p{
+    margin: 0 !important;
+}
+
+.image[data-position] img {
+    object-fit: contain;
+}
+@media screen and (max-width: 736px) and (orientation: portrait){
+.panel.banner .image {
+    height: 32rem !important;
+}
+}
