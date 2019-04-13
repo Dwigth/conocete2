@@ -16,6 +16,7 @@ h1 {
 .slider {
   height: 320px;
   width: 680px;
+  width: 100vp;
   margin: 40px auto 0;
   overflow: visible;
   position: relative;
@@ -260,4 +261,14 @@ h1 {
     opacity: 0;
     z-index: 0;
   }
+}
+
+@media screen and (max-width: 736px) and (orientation: portrait){
+    .slider{
+        width: 300px;
+        
+    }
+    .slider li div{
+        word-wrap: break-word !important;
+    }
 }
