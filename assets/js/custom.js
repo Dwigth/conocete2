@@ -46,7 +46,7 @@
         }
     }, 25000);
 
-    copyright.append('&copy;');
+    // copyright.append('&copy;');
     copyright.textContent += `Conocete Y Protegete. ${new Date().getFullYear()}.`
 
     input.addEventListener('click', function (evt) {
