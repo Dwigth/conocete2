@@ -1,10 +1,5 @@
-(function () {
-    var name = document.querySelector('#name');
-    var email = document.querySelector('#email');
-    var message = document.querySelector('#message');
-    var input = document.querySelector('#btn');
-    var copyright = document.querySelector('.copyright');
-    var referencias = [
+{
+    "referencias": [
         "Estrategia Nacional para la Prevención del Embarazo en Adolescentes (2017). Ciudad de México.",
         "Keith L. Moore, Arthur F. Dalley, Anne M.R.Agur. (2010). Anatomía con orientación Cliníca. España: Lippincott Williams & Wilkins.",
         "Ross y Pawlina. (2009). Aparato Genital Femenino. En Histologia Texto y Atlas color con Biologia Celular y Molecular(844 849). Buenos Aires: Médica Panamericana.",
@@ -29,36 +24,5 @@
         "Prevención y detección oportuna del cáncer cérvico uterino en el primer nivel de aten- ción. México: Secretaría de Salud, diciembre del 2011",
         "Pineda López M, Ceballos Blanco R. (2008). Evaluación de Tecnologías para la Salud: Evaluación de la Efectividad de los dispositivos para la toma de Frotis de Papanicolaou. CENETEC 1, 13. 2017, mayo 09., De Expediente CENETEC: 20S.6.2/05/2008",
         "Pérez-Palacios Gregorio. (1994). NOM-014-SSA2-1994, Para la prevención, detección, diagnóstico, tratamiento, control y vigilancia epidemiológica del cáncer cérvico uterino. 2 de marzo de 1998., de Secretaría de Salud."
-    ];
-    var listaReferencias = document.querySelector('#quoute-list');
-    var referenciasEnLista = Array.from(listaReferencias.children);
-    var incremento = 5;
-    var inicio = 0;
-    var final = incremento + inicio;
-    referenciasDOM(inicio, final);
-    setInterval(() => {
-        referenciasDOM(inicio, final);
-        inicio += incremento;
-        final = incremento + inicio;
-        if (inicio > referencias.length) {
-            inicio = 0;
-            final = incremento + inicio;
-        }
-    }, 25000);
-
-    copyright.append('&copy;');
-    copyright.textContent += `Conocete Y Protegete. ${new Date().getFullYear()}.`
-
-    input.addEventListener('click', function (evt) {
-        // evt.preventDefault();
-        input.href = `mailto:grupoikaro@gmail.com?body=Mi nombre es ${name.value}. ${message.value}`;
-    });
-
-    function referenciasDOM(inicio, final) {
-        var referenciasActuales = referencias.slice(inicio, final);
-        referenciasEnLista.forEach((li, i) => {
-            li.children[0].textContent = referenciasActuales[i];
-        });
-    }
-
-})();
+    ]
+}
