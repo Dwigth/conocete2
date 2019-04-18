@@ -1,6 +1,11 @@
+/**
+ * @copyright KrustyLabDevelopers
+ * @version 1.0.0
+ * @description Script que integra referencias dinámicas, mailTo de formulario de contacto
+ *              y copyright de conocete y protegete.
+ */
 (function () {
     var name = document.querySelector('#name');
-    var email = document.querySelector('#email');
     var message = document.querySelector('#message');
     var input = document.querySelector('#btn');
     var copyright = document.querySelector('.copyright');
@@ -46,7 +51,6 @@
         }
     }, 25000);
 
-    // copyright.append('&copy;');
     copyright.textContent += `Conocete Y Protegete. ${new Date().getFullYear()}.`
 
     input.addEventListener('click', function (evt) {
