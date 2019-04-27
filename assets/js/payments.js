@@ -4,17 +4,17 @@
  * @description Integración de formulario de pagos en línea con la librería de Conekta
  */
 (function () {
+    const baseURL = 'conoceteyprotegete.com.mx';
 
-    function makeRequest() {
+    function makeRequest(url, method) {
         const Http = new XMLHttpRequest();
-        const url = 'https://jsonplaceholder.typicode.com/posts';
-        Http.open("GET", url);
+        const url = url;
+        Http.open(method, url);
         Http.send();
-        Http.onreadystatechange = (e) => {
+        Http.onreadystatechange = function (e) {
             console.log(Http.responseText)
         }
     }
-
 
     Conekta.setPublicKey("key_JT4EwCbV5CC84AMBxxuwSxQ");
     Conekta.setLanguage("es");
