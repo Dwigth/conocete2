@@ -20,6 +20,128 @@
 
 <body class="is-preload">
 
+	<div id="modal-comprar" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<!-- <span class="close">&times;</span> -->
+			<section class="panel color4-alt">
+				<div class="intro color4">
+					<h2 class="major">Conocete y protegete</h2>
+					<!-- <p>Producto aún no disponible.</p> -->
+					<img style="width: 200px;" class="image filtered" src="images/portada.jpg" alt="">
+				</div>
+				<div class="inner columns divided">
+					<div class="span-3-25">
+						<form method="POST" id="card-form" action="#">
+							<div class="fields" style="color:white;">
+								<div class="field large">
+									<label for="tarjeta">Nombre del Tarjetahabiente</label>
+									<input type="text" name="tarjeta" id="tarjeta" />
+								</div>
+								<div class="field large">
+									<label for="email">Número de tarjeta (sin guiones)</label>
+									<input type="email" size="20" name="numero" id="numero" />
+								</div>
+								<div class="field large">
+									<label for="name">Fecha de Expiración</label>
+								</div>
+								<div class="field half">
+									<label for="name">Mes</label>
+									<input type="text" size="2" name="exp" id="exp" />
+								</div>
+								<div class="field half">
+									<label for="name">año</label>
+									<input type="text" size="4" name="name" id="cvc" />
+								</div>
+								<div class="field large">
+									<label for="name">Cód. de Seguridad</label>
+									<input type="text" name="name" id="cvc" />
+								</div>
+								<div class="field large">
+									<label for="name">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field large">
+									<label for="name">Telefono</label>
+									<input type="text" name="telefono" id="telefono" />
+								</div>
+
+								<div class="field large">
+									<label for="name">Dirección</label>
+								</div>
+								<div class="field large">
+									<label for="name">Estado</label>
+									<select name="estado" id="estado">
+										<option value="0">-</option>
+										<option value="Aguascalientes">Aguascalientes</option>
+										<option value="Baja California">Baja California</option>
+										<option value="Baja California Sur">Baja California Sur</option>
+										<option value="Campeche">Campeche</option>
+										<option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+										<option value="Colima">Colima</option>
+										<option value="Chiapas">Chiapas</option>
+										<option value="Chihuahua">Chihuahua</option>
+										<option value="Distrito Federal">Distrito Federal</option>
+										<option value="Durango">Durango</option>
+										<option value="Guanajuato">Guanajuato</option>
+										<option value="Guerrero">Guerrero</option>
+										<option value="Hidalgo">Hidalgo</option>
+										<option value="Jalisco">Jalisco</option>
+										<option value="México">México</option>
+										<option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+										<option value="Morelos">Morelos</option>
+										<option value="Nayarit">Nayarit</option>
+										<option value="Nuevo León">Nuevo León</option>
+										<option value="Oaxaca">Oaxaca</option>
+										<option value="Puebla">Puebla</option>
+										<option value="Querétaro">Querétaro</option>
+										<option value="Quintana Roo">Quintana Roo</option>
+										<option value="San Luis Potosí">San Luis Potosí</option>
+										<option value="Sinaloa">Sinaloa</option>
+										<option value="Sonora">Sonora</option>
+										<option value="Tabasco">Tabasco</option>
+										<option value="Tamaulipas">Tamaulipas</option>
+										<option value="Tlaxcala">Tlaxcala</option>
+										<option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave
+										</option>
+										<option value="Yucatán">Yucatán</option>
+										<option value="Zacatecas">Zacatecas</option>
+									</select>
+								</div>
+
+								<div class="field large">
+									<label for="name">Ciudad</label>
+									<input type="text" name="ciudad" id="ciudad" />
+								</div>
+								<div class="field large">
+									<label for="name">Calle</label>
+									<input type="text" name="calle" id="calle" />
+								</div>
+								<div class="field large">
+									<label for="name">Colonia</label>
+									<input type="text" name="Colonia" id="Colonia" />
+								</div>
+								<div class="field large">
+									<label for="name">Código postal</label>
+									<input type="text" name="cp" id="cp" />
+								</div>
+							</div>
+
+							<ul class="actions">
+								<li><button type="submit" id="pay" href="#" class="button primary">Pagar
+										$399.00</button type="submit"></li>
+								<li><a href="#" class="button primary close">Cerrar</a></li>
+
+							</ul>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+
+	</div>
+
 	<!-- Page Wrapper -->
 	<div id="page-wrapper">
 
@@ -213,7 +335,7 @@
 							</li>
 						</ul>
 					</p>
-					<button class="button primary color2">Comprar</button>
+					<button class="button primary color2 btn-comprar">Comprar</button>
 				</div>
 
 
@@ -309,8 +431,12 @@
 			</div>
 
 		</div>
-		<a href="http://conoceteyprotegete.mx/terminos.html" style="position: fixed;bottom: 0;"
-			class="button primary color2">Terminos y Condiciones</a>
+		<div style="position: fixed;bottom: 0;">
+			<a href="http://conoceteyprotegete.mx/terminos.html" class="button primary color2">Terminos y
+				Condiciones</a>
+			<button class="button primary color2 btn-comprar">Comprar</button>
+		</div>
+
 	</div>
 
 	<!-- Scripts -->
@@ -319,7 +445,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/custom.js"></script>
-	<script src="https://cdn.conekta.io/js/latest/conekta.js"></script>
+	<script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
 	<script src="assets/js/payments.js"></script>
 
 </body>

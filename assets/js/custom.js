@@ -9,6 +9,10 @@
     var message = document.querySelector('#message');
     var input = document.querySelector('#btn');
     var copyright = document.querySelector('.copyright');
+    var btnComprar = Array.from(document.querySelectorAll('.btn-comprar'));
+    var modal = document.querySelector('#modal-comprar');
+    var span = document.querySelector(".close");
+
     var referencias = [
         "Estrategia Nacional para la Prevención del Embarazo en Adolescentes (2017). Ciudad de México.",
         "Keith L. Moore, Arthur F. Dalley, Anne M.R.Agur. (2010). Anatomía con orientación Cliníca. España: Lippincott Williams & Wilkins.",
@@ -64,5 +68,24 @@
             li.children[0].textContent = referenciasActuales[i];
         });
     }
+
+    btnComprar.map(function (btn) {
+        btn.addEventListener('click', function () {
+            modal.style.visibility = "visible";
+            modal.classList.add('active');
+        });
+    });
+
+    span.addEventListener('click', function () {
+        modal.style.visibility = "hidden";
+        modal.classList.remove('active');
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target == modal) {
+            modal.style.visibility = "hidden";
+            modal.classList.remove('active');
+        }
+    });
 
 })();
