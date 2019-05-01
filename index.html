@@ -37,25 +37,25 @@
 							<div class="fields" style="color:white;">
 								<div class="field large">
 									<label for="tarjeta">Nombre del Tarjetahabiente</label>
-									<input type="text" name="tarjeta" id="tarjeta" />
+									<input type="text" name="nombre-trh" id="nombre-trh" />
 								</div>
 								<div class="field large">
 									<label for="email">Número de tarjeta (sin guiones)</label>
-									<input type="email" size="20" name="numero" id="numero" />
+									<input type="text" maxlength="16" name="tarjeta" id="tarjeta" />
 								</div>
 								<div class="field large">
-									<label for="name">Fecha de Expiración</label>
+									<label for="">Fecha de Expiración</label>
 								</div>
 								<div class="field half">
-									<label for="name">Mes</label>
-									<input type="text" size="2" name="exp" id="exp" />
+									<label for="">Mes</label>
+									<input type="text" size="2" name="exp-mes" id="exp-mes" />
 								</div>
 								<div class="field half">
-									<label for="name">año</label>
-									<input type="text" size="4" name="name" id="cvc" />
+									<label for="">año</label>
+									<input type="text" size="4" name="exp-anio" id="exp-anio" />
 								</div>
 								<div class="field large">
-									<label for="name">Cód. de Seguridad</label>
+									<label for="">Cód. de Seguridad</label>
 									<input type="text" name="name" id="cvc" />
 								</div>
 								<div class="field large">
@@ -126,6 +126,10 @@
 									<label for="name">Código postal</label>
 									<input type="text" name="cp" id="cp" />
 								</div>
+							</div>
+
+							<div class="field large">
+								<label for="" id="errors"></label>
 							</div>
 
 							<ul class="actions">
