@@ -72,5 +72,7 @@ p{
 .modal-content{
     padding: 0px;
 }
-
+.video{
+    width: auto;
+}
 }
