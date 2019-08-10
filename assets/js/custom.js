@@ -59,7 +59,7 @@
 
     input.addEventListener('click', function (evt) {
         // evt.preventDefault();
-        input.href = `mailto:grupoikaro@gmail.com?body=Mi nombre es ${name.value}. ${message.value}`;
+        input.href = `mailto:hola@conoceteyprotegete.mx?body=Mi nombre es ${name.value}. ${message.value}`;
     });
 
     function referenciasDOM(inicio, final) {
@@ -76,10 +76,10 @@
         });
     });
 
-    span.addEventListener('click', function () {
-        modal.style.visibility = "hidden";
-        modal.classList.remove('active');
-    });
+    // span.addEventListener('click', function () {
+    //     modal.style.visibility = "hidden";
+    //     modal.classList.remove('active');
+    // });
 
     window.addEventListener('click', function (event) {
         if (event.target == modal) {
